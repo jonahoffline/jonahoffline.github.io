@@ -1,12 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://jonahoffline.github.io/blog/rvm-for-your-ruby-projects/</loc>
+        <lastmod>2013-08-13T17:48:29-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://jonahoffline.github.io/blog/rspec-test-results-in-html/</loc>
+        <lastmod>2013-08-13T17:48:47-04:00</lastmod>
+    </url>
+    <url>
         <loc>http://jonahoffline.github.io/blog/archives/</loc>
-        <lastmod>2013-08-13T17:26:27-04:00</lastmod>
+        <lastmod>2013-08-13T17:48:47-04:00</lastmod>
     </url>
     <url>
         <loc>http://jonahoffline.github.io/</loc>
-        <lastmod>2013-08-13T17:26:27-04:00</lastmod>
+        <lastmod>2013-08-13T17:48:47-04:00</lastmod>
     </url>
     <url>
         <loc>http://jonahoffline.github.io/robots.txt</loc>

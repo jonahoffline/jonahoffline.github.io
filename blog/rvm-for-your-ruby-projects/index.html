@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Holy Ruby!</title>
+  <title>RVM for your Ruby projects - Holy Ruby!</title>
   <meta name="author" content="Jonah Ruiz">
 
   
-  <meta name="description" content="Blog Archive 2013 RSpec Test Results in HTML
-Aug 06 2013 posted in BDD, RSpec, Rails, Reports, Ruby, TDD, Teams RVM for your Ruby projects
-Aug 04 &hellip;">
+  <meta name="description" content="While doing some pair-programming with a friend of mine, I noticed he had RVM installed but only used one gemset for everything. As a result, his &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ Aug 04 &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jonahoffline.github.io/blog/archives">
+  <link rel="canonical" href="http://jonahoffline.github.io/blog/rvm-for-your-ruby-projects">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="http://feeds.feedburner.com/HolyRuby" rel="alternate" title="Holy Ruby!" type="application/atom+xml">
@@ -78,50 +76,170 @@ Aug 04 &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">RVM for Your Ruby Projects</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-04T23:39:00-04:00" pubdate data-updated="true">Aug 4<span>th</span>, 2013</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>While doing some pair-programming with a friend of mine, I noticed he had <a href="https://www.rvm.io">RVM</a> installed but only used one gemset for <em>everything</em>. As a result, his machine was slow and polluted with old gem versions. You could say that it was almost a mirror of <a href="http://www.rubygems.org">Rubygems</a>. I wondered how many ruby developers had the same problem so I decided to share this.</p>
 
-  
-  <h2>2013</h2>
+<h2>Installing RVM</h2>
 
-<article>
-  
-<h1><a href="/blog/rspec-test-results-in-html/">RSpec Test Results in HTML</a></h1>
-<time datetime="2013-08-06T00:25:00-04:00" pubdate><span class='month'>Aug</span> <span class='day'>06</span> <span class='year'>2013</span></time>
+<p>If you have never used RVM, you&rsquo;ve been missing out. It won&rsquo;t do the dishes or clean your room, but it will make you happier. RVM allows you to easily install, manage, and work with multiple ruby environments. Avoiding version conflicts and maintaining any ruby project, gem, or Rails app organized is now a breeze.</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/bdd/'>BDD</a>, <a class='category' href='/blog/categories/rspec/'>RSpec</a>, <a class='category' href='/blog/categories/rails/'>Rails</a>, <a class='category' href='/blog/categories/reports/'>Reports</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/tdd/'>TDD</a>, <a class='category' href='/blog/categories/teams/'>Teams</a></span>
-</footer>
+<p>Let&rsquo;s get it out of the way and install it along a stable version of Ruby.</p>
 
+<pre><code>$ \curl -L https://get.rvm.io | bash -s stable --ruby
+</code></pre>
 
-</article>
+<p>Depending on your internet connection and computer, it will take a few minutes. Once that&rsquo;s done, you will need to reopen your shell window or run:</p>
 
+<pre><code>$ source ~/.rvm/scripts/rvm
+</code></pre>
 
+<p>Let&rsquo;s verify that RVM is loaded and that everything is installed correctly.</p>
 
-<article>
-  
-<h1><a href="/blog/rvm-for-your-ruby-projects/">RVM for your Ruby projects</a></h1>
-<time datetime="2013-08-04T23:39:00-04:00" pubdate><span class='month'>Aug</span> <span class='day'>04</span> <span class='year'>2013</span></time>
+<pre><code>$ rvm current
+</code></pre>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/rvm/'>RVM</a>, <a class='category' href='/blog/categories/rails/'>Rails</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a></span>
-</footer>
+<p>You should now get a Ruby version (e.g., <code>ruby-2.0.0-p247</code>). If you didn&rsquo;t, run <code>rvm notes</code>.</p>
 
+<h2>Using RVM to organize your projects</h2>
 
-</article>
+<p>Instead of globally sharing one gemset for all projects, let&rsquo;s create one for our imaginary <strong>Quantum Kittens</strong> Rails App.</p>
 
+<p>Just enter the directory and run:</p>
+
+<pre><code>$ rvm --create --ruby-version ruby-2.0.0-p247@quantum_kittens
+</code></pre>
+
+<p>The command will not output anything, but if we run <code>ls -a</code> you will notice there are now two files in the directory.</p>
+
+<pre><code>.ruby-version
+.ruby-gemset
+</code></pre>
+
+<p>From now on, RVM will automatically change into that ruby version (<code>ruby-2.0.0-p247</code>) with any gems you install to its self-contained gemset (<code>quantum_kittens</code>) every time you enter that directory. You should check these two files into your source control.</p>
+
+<h4>Other useful RVM commands</h4>
+
+<p>This article would not be complete without a few of the most used RVM commands.</p>
+
+<p>To verify the current version and gemset:</p>
+
+<pre><code>$ rvm current
+</code></pre>
+
+<p>To get a list of gemsets:</p>
+
+<pre><code>$ rvm gemset list
+</code></pre>
+
+<p>To get a list of all the installed versions of ruby:</p>
+
+<pre><code>$ rvm list  
+</code></pre>
+
+<p>To view available versions of ruby to install:</p>
+
+<pre><code>$ rvm list known
+</code></pre>
+
+<p>To install  another ruby version:</p>
+
+<pre><code>$ rvm install rbx-head
+</code></pre>
+
+<p>To set a default ruby with a new gemset:</p>
+
+<pre><code>$ rvm --create --default use rbx-head@kawaii_gems
+</code></pre>
+
+<p>To remove a gemset:</p>
+
+<pre><code>$ rvm gemset delete evil_gems
+</code></pre>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Jonah Ruiz</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-04T23:39:00-04:00" pubdate data-updated="true">Aug 4<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/rvm/'>RVM</a>, <a class='category' href='/blog/categories/rails/'>Rails</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://jonahoffline.github.io/blog/rvm-for-your-ruby-projects/" data-via="JonahBinario" data-counturl="http://jonahoffline.github.io/blog/rvm-for-your-ruby-projects/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/rspec-test-results-in-html/" title="Next Post: RSpec Test Results in HTML">RSpec Test Results in HTML &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -207,7 +325,10 @@ Aug 04 &hellip;">
       var disqus_shortname = 'holyruby';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://jonahoffline.github.io/blog/rvm-for-your-ruby-projects/';
+        var disqus_url = 'http://jonahoffline.github.io/blog/rvm-for-your-ruby-projects/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
