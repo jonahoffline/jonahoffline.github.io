@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "RVM for your Ruby projects"
-date: 2013-08-04 23:39
+date: 2013-07-29 23:39
 comments: true
 categories: 
 - Ruby

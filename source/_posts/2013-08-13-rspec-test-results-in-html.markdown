@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "RSpec Test Results in HTML"
-date: 2013-08-06 00:25
+date: 2013-08-07 00:25
 comments: true
 categories: 
 - Ruby
