@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Learning | Holy Ruby!]]></title>
-  <link href="http://jonahoffline.github.io/blog/categories/learning/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Knowledge debt | Holy Ruby!]]></title>
+  <link href="http://jonahoffline.github.io/blog/categories/knowledge-debt/atom.xml" rel="self"/>
   <link href="http://jonahoffline.github.io/"/>
   <updated>2013-08-14T13:52:02-04:00</updated>
   <id>http://jonahoffline.github.io/</id>
