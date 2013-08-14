@@ -4,9 +4,10 @@ title: "We Are Deprecateware"
 date: 2013-08-14 10:57
 comments: true
 categories:
+- Knowledge debt
 - Learning
-- Training
-- Groupthink 
+- Growing 
+- Fear of Failure
 - Innovation
 - Github
 - Bitbucket
