@@ -19,7 +19,7 @@ To delay this natural cycle and leave a mark, we have to be willing to try new t
 
 ## Become a Polyglot
 
-Don't conform to a single language, infrastructure or database. Push yourself to learn new skills. Being able to properly write tests and code in more than one language will make you more valuable. Being diverse means less limits, new horizons. Transfering newly acquired knowledge not only help others, it solidifies your understanding of it.
+Don't conform to a single language, infrastructure or database. Push yourself to learn new skills. Being able to properly write tests and code in more than one language will make you more valuable. Being diverse means less limits, new horizons. Transferring newly acquired knowledge not only help others, it solidifies your understanding of it.
 
 
 ## Innovation and Fear of Failure
