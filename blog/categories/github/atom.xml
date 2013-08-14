@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Github | Holy Ruby!]]></title>
+  <link href="http://jonahoffline.github.io/blog/categories/github/atom.xml" rel="self"/>
+  <link href="http://jonahoffline.github.io/"/>
+  <updated>2013-08-14T13:38:26-04:00</updated>
+  <id>http://jonahoffline.github.io/</id>
+  <author>
+    <name><![CDATA[Jonah Ruiz]]></name>
+    <email><![CDATA[jonah@pixelhipsters.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[We Are Deprecateware]]></title>
+    <link href="http://jonahoffline.github.io/blog/we-are-deprecateware/"/>
+    <updated>2013-08-14T10:57:00-04:00</updated>
+    <id>http://jonahoffline.github.io/blog/we-are-deprecateware</id>
+    <content type="html"><![CDATA[<p>As developers, we are in a constant race against technical and knowledge debt. Like it or not, it&rsquo;s impossible to win. By default, we are deprecateware; we are destined to grow irrelevant and be replaced eventually. Usually someone younger with a higher threshold for pain and a full tank of tolerance ready for your textbook example of software archeology, ancient practices and verbosity monstrosity you shamelessly call code.</p>
+
+<p>To delay this natural cycle and leave a mark, we have to be willing to try new things and adapt fast. Go ahead and experiment, dive deep into it until you can build something new. This integration process is often a loop that requires a lot of time, patience and commitment; We trade-in productivity for new knowledge; we leave our comfort zone in exchange for a possible lethal dose of frustration, anger and even depression. To discard any new programming language, framework or software as hype-technology; and let ourselves slowly fade into the background is simpler and requires no effort.</p>
+
+<blockquote><p>&ldquo;It&rsquo;s easy to attack and destroy an act of creation. It&rsquo;s a lot more difficult to perform one.&rdquo; &ndash; Chuck Palahniuk</p></blockquote>
+
+<h2>Become a Polyglot</h2>
+
+<p>Don&rsquo;t conform to a single language, infrastructure or database. Push yourself to learn new skills. Being able to properly write tests and code in more than one language will make you more valuable. Being diverse means less limits, new horizons. Transfering newly acquired knowledge not only help others, it solidifies your understanding of it.</p>
+
+<h2>Innovation and Fear of Failure</h2>
+
+<blockquote><p>&ldquo;An innovation is something <strong>original, new, and important</strong> &ndash; in whatever field &ndash; that breaks in to (or obtains a foothold in) a market or society.&rdquo;(<a href="http://en.wikipedia.org/wiki/Innovation">wikipedia</a>)</p></blockquote>
+
+<p><strong>BULLSHIT</strong>.</p>
+
+<p>Innovation is a result of combining existent elements or ideas that were waiting to be merged. Innovation is ever omnipresent, it is not sporadic nor a one-time event. When you open source a project or contribute in a community like <a href="https://www.github.com">Github</a> or <a href="https://www.bitbucket.org">Bitbucket</a>, you take part in the innovation iteration. No matter how simple, unstable or insignificant you may think your code or contribution is; you are changing the World with each commit. To be aware of this privilege and power should be enough to get through your head that you can&rsquo;t fail even if you&rsquo;d try to. Fear of failure is as illogical as fear of drowning in bed. <a href="http://www.youtube.com/watch?v=nRB8Jor8tPs">Shun the non-believers!</a> Your code might save someone&rsquo;s life tomorrow.</p>
+
+<p>Be a GitThug, embrace change and you&rsquo;ll get a GitHug :)</p>
+]]></content>
+  </entry>
+  
+</feed>

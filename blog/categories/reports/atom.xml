@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Reports | Holy Ruby!]]></title>
   <link href="http://jonahoffline.github.io/blog/categories/reports/atom.xml" rel="self"/>
   <link href="http://jonahoffline.github.io/"/>
-  <updated>2013-08-13T21:58:29-04:00</updated>
+  <updated>2013-08-14T13:38:26-04:00</updated>
   <id>http://jonahoffline.github.io/</id>
   <author>
     <name><![CDATA[Jonah Ruiz]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[RSpec Test Results in HTML]]></title>
     <link href="http://jonahoffline.github.io/blog/rspec-test-results-in-html/"/>
-    <updated>2013-08-06T00:25:00-04:00</updated>
+    <updated>2013-08-07T00:25:00-04:00</updated>
     <id>http://jonahoffline.github.io/blog/rspec-test-results-in-html</id>
     <content type="html"><![CDATA[<p>When working with <strong>Ruby On Rails</strong> and <strong>RSpec</strong>, you may want to share your test results with teammates. A screenshot of the terminal just won&rsquo;t do it. Let&rsquo;s make RSpec generate an html page for us.</p>
 
