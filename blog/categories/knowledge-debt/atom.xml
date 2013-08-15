@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Knowledge debt | Holy Ruby!]]></title>
   <link href="http://jonahoffline.github.io/blog/categories/knowledge-debt/atom.xml" rel="self"/>
   <link href="http://jonahoffline.github.io/"/>
-  <updated>2013-08-14T13:52:02-04:00</updated>
+  <updated>2013-08-14T20:28:43-04:00</updated>
   <id>http://jonahoffline.github.io/</id>
   <author>
     <name><![CDATA[Jonah Ruiz]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[We Are Deprecateware]]></title>
-    <link href="http://jonahoffline.github.io/blog/we-are-deprecateware/"/>
+    <link href="http://jonahoffline.github.io/we-are-deprecateware/"/>
     <updated>2013-08-14T10:57:00-04:00</updated>
-    <id>http://jonahoffline.github.io/blog/we-are-deprecateware</id>
+    <id>http://jonahoffline.github.io/we-are-deprecateware</id>
     <content type="html"><![CDATA[<p>As developers, we are in a constant race against technical and knowledge debt. Like it or not, it&rsquo;s impossible to win. By default, we are deprecateware; we are destined to grow irrelevant and be replaced eventually. Usually someone younger with a higher threshold for pain and a full tank of tolerance ready for your textbook example of software archeology, ancient practices and verbosity monstrosity you shamelessly call code.</p>
 
 <p>To delay this natural cycle and leave a mark, we have to be willing to try new things and adapt fast. Go ahead and experiment, dive deep into it until you can build something new. This integration process is often a loop that requires a lot of time, patience and commitment; We trade-in productivity for new knowledge; we leave our comfort zone in exchange for a possible lethal dose of frustration, anger and even depression. To discard any new programming language, framework or software as hype-technology; and let ourselves slowly fade into the background is simpler and requires no effort.</p>

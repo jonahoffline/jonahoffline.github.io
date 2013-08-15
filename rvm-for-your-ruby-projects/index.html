@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>We Are Deprecateware - Holy Ruby!</title>
+  <title>RVM for your Ruby projects - Holy Ruby!</title>
   <meta name="author" content="Jonah Ruiz">
 
   
-  <meta name="description" content="As developers, we are in a constant race against technical and knowledge debt. Like it or not, it&rsquo;s impossible to win. By default, we are &hellip;">
+  <meta name="description" content="While doing some pair-programming with a friend of mine, I noticed he had RVM installed but only used one gemset for everything. As a result, his &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jonahoffline.github.io/blog/we-are-deprecateware">
+  <link rel="canonical" href="http://jonahoffline.github.io/rvm-for-your-ruby-projects">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="http://feeds.feedburner.com/HolyRuby" rel="alternate" title="Holy Ruby!" type="application/atom+xml">
@@ -68,8 +68,8 @@
 </form>
   
 <ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/">Home</a></li>
+  <li><a href="/archives">Archives</a></li>
 </ul>
 
 </nav>
@@ -80,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">We Are Deprecateware</h1>
+      <h1 class="entry-title">RVM for Your Ruby Projects</h1>
     
     
       <p class="meta">
@@ -96,32 +96,91 @@
   
 
 
-<time datetime="2013-08-14T10:57:00-04:00" pubdate data-updated="true">Aug 14<span>th</span>, 2013</time>
+<time datetime="2013-07-29T23:39:00-04:00" pubdate data-updated="true">Jul 29<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>As developers, we are in a constant race against technical and knowledge debt. Like it or not, it&rsquo;s impossible to win. By default, we are deprecateware; we are destined to grow irrelevant and be replaced eventually. Usually someone younger with a higher threshold for pain and a full tank of tolerance ready for your textbook example of software archeology, ancient practices and verbosity monstrosity you shamelessly call code.</p>
+<div class="entry-content"><p>While doing some pair-programming with a friend of mine, I noticed he had <a href="https://www.rvm.io">RVM</a> installed but only used one gemset for <em>everything</em>. As a result, his machine was slow and polluted with old gem versions. You could say that it was almost a mirror of <a href="http://www.rubygems.org">Rubygems</a>. I wondered how many ruby developers had the same problem so I decided to share this.</p>
 
-<p>To delay this natural cycle and leave a mark, we have to be willing to try new things and adapt fast. Go ahead and experiment, dive deep into it until you can build something new. This integration process is often a loop that requires a lot of time, patience and commitment; We trade-in productivity for new knowledge; we leave our comfort zone in exchange for a possible lethal dose of frustration, anger and even depression. To discard any new programming language, framework or software as hype-technology; and let ourselves slowly fade into the background is simpler and requires no effort.</p>
+<h2>Installing RVM</h2>
 
-<blockquote><p>&ldquo;It&rsquo;s easy to attack and destroy an act of creation. It&rsquo;s a lot more difficult to perform one.&rdquo; &ndash; Chuck Palahniuk</p></blockquote>
+<p>If you have never used RVM, you&rsquo;ve been missing out. It won&rsquo;t do the dishes or clean your room, but it will make you happier. RVM allows you to easily install, manage, and work with multiple ruby environments. Avoiding version conflicts and maintaining any ruby project, gem, or Rails app organized is now a breeze.</p>
 
-<h2>Become a Polyglot</h2>
+<p>Let&rsquo;s get it out of the way and install it along a stable version of Ruby.</p>
 
-<p>Don&rsquo;t conform to a single language, infrastructure or database. Push yourself to learn new skills. Being able to properly write tests and code in more than one language will make you more valuable. Being diverse means less limits, new horizons. Transferring newly acquired knowledge not only help others, it solidifies your understanding of it.</p>
+<pre><code>$ \curl -L https://get.rvm.io | bash -s stable --ruby
+</code></pre>
 
-<h2>Innovation and Fear of Failure</h2>
+<p>Depending on your internet connection and computer, it will take a few minutes. Once that&rsquo;s done, you will need to reopen your shell window or run:</p>
 
-<blockquote><p>&ldquo;An innovation is something <strong>original, new, and important</strong> &ndash; in whatever field &ndash; that breaks in to (or obtains a foothold in) a market or society.&rdquo;(<a href="http://en.wikipedia.org/wiki/Innovation">wikipedia</a>)</p></blockquote>
+<pre><code>$ source ~/.rvm/scripts/rvm
+</code></pre>
 
-<p><strong>BULLSHIT</strong>.</p>
+<p>Let&rsquo;s verify that RVM is loaded and that everything is installed correctly.</p>
 
-<p>Innovation is a result of combining existent elements or ideas that were waiting to be merged. Innovation is ever omnipresent, it is not sporadic nor a one-time event. When you open source a project or contribute in a community like <a href="https://www.github.com">Github</a> or <a href="https://www.bitbucket.org">Bitbucket</a>, you take part in the innovation iteration. No matter how simple, unstable or insignificant you may think your code or contribution is; you are changing the World with each commit. To be aware of this privilege and power should be enough to get through your head that you can&rsquo;t fail even if you&rsquo;d try to. Fear of failure is as illogical as fear of drowning in bed. <a href="http://www.youtube.com/watch?v=nRB8Jor8tPs">Shun the non-believers!</a> Your code might save someone&rsquo;s life tomorrow.</p>
+<pre><code>$ rvm current
+</code></pre>
 
-<p>Be a GitThug, embrace change and you&rsquo;ll get a GitHug :)</p>
+<p>You should now get a Ruby version (e.g., <code>ruby-2.0.0-p247</code>). If you didn&rsquo;t, run <code>rvm notes</code>.</p>
+
+<h2>Using RVM to organize your projects</h2>
+
+<p>Instead of globally sharing one gemset for all projects, let&rsquo;s create one for our imaginary <strong>Quantum Kittens</strong> Rails App.</p>
+
+<p>Just enter the directory and run:</p>
+
+<pre><code>$ rvm --create --ruby-version ruby-2.0.0-p247@quantum_kittens
+</code></pre>
+
+<p>The command will not output anything, but if we run <code>ls -a</code> you will notice there are now two files in the directory.</p>
+
+<pre><code>.ruby-version
+.ruby-gemset
+</code></pre>
+
+<p>From now on, RVM will automatically change into that ruby version (<code>ruby-2.0.0-p247</code>) with any gems you install to its self-contained gemset (<code>quantum_kittens</code>) every time you enter that directory. You should check these two files into your source control.</p>
+
+<h4>Other useful RVM commands</h4>
+
+<p>This article would not be complete without a few of the most used RVM commands.</p>
+
+<p>To verify the current version and gemset:</p>
+
+<pre><code>$ rvm current
+</code></pre>
+
+<p>To get a list of gemsets:</p>
+
+<pre><code>$ rvm gemset list
+</code></pre>
+
+<p>To get a list of all the installed versions of ruby:</p>
+
+<pre><code>$ rvm list  
+</code></pre>
+
+<p>To view available versions of ruby to install:</p>
+
+<pre><code>$ rvm list known
+</code></pre>
+
+<p>To install  another ruby version:</p>
+
+<pre><code>$ rvm install rbx-head
+</code></pre>
+
+<p>To set a default ruby with a new gemset:</p>
+
+<pre><code>$ rvm --create --default use rbx-head@kawaii_gems
+</code></pre>
+
+<p>To remove a gemset:</p>
+
+<pre><code>$ rvm gemset delete evil_gems
+</code></pre>
 </div>
 
 
@@ -144,12 +203,12 @@
   
 
 
-<time datetime="2013-08-14T10:57:00-04:00" pubdate data-updated="true">Aug 14<span>th</span>, 2013</time>
+<time datetime="2013-07-29T23:39:00-04:00" pubdate data-updated="true">Jul 29<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/bitbucket/'>Bitbucket</a>, <a class='category' href='/blog/categories/fear-of-failure/'>Fear of Failure</a>, <a class='category' href='/blog/categories/github/'>Github</a>, <a class='category' href='/blog/categories/growing/'>Growing</a>, <a class='category' href='/blog/categories/innovation/'>Innovation</a>, <a class='category' href='/blog/categories/knowledge-debt/'>Knowledge debt</a>, <a class='category' href='/blog/categories/learning/'>Learning</a>
+    <a class='category' href='/blog/categories/rvm/'>RVM</a>, <a class='category' href='/blog/categories/rails/'>Rails</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>
   
 </span>
 
@@ -158,7 +217,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://jonahoffline.github.io/blog/we-are-deprecateware/" data-via="JonahBinario" data-counturl="http://jonahoffline.github.io/blog/we-are-deprecateware/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://jonahoffline.github.io/rvm-for-your-ruby-projects/" data-via="JonahBinario" data-counturl="http://jonahoffline.github.io/rvm-for-your-ruby-projects/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -169,8 +228,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/rspec-test-results-in-html/" title="Previous Post: RSpec Test Results in HTML">&laquo; RSpec Test Results in HTML</a>
       
+        <a class="basic-alignment right" href="/rspec-test-results-in-html/" title="Next Post: RSpec Test Results in HTML">RSpec Test Results in HTML &raquo;</a>
       
     </p>
   </footer>
@@ -196,15 +255,15 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/we-are-deprecateware/">We Are Deprecateware</a>
+        <a href="/we-are-deprecateware/">We Are Deprecateware</a>
       </li>
     
       <li class="post">
-        <a href="/blog/rspec-test-results-in-html/">RSpec Test Results in HTML</a>
+        <a href="/rspec-test-results-in-html/">RSpec Test Results in HTML</a>
       </li>
     
       <li class="post">
-        <a href="/blog/rvm-for-your-ruby-projects/">RVM for Your Ruby Projects</a>
+        <a href="/rvm-for-your-ruby-projects/">RVM for Your Ruby Projects</a>
       </li>
     
   </ul>
@@ -252,6 +311,13 @@
 
 
 
+<section>
+  <div>
+    <a href="http://twitter.com/JonahBinario" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @JonahBinario</a>
+  </div>
+</section>
+
+
   
 </aside>
 
@@ -271,8 +337,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jonahoffline.github.io/blog/we-are-deprecateware/';
-        var disqus_url = 'http://jonahoffline.github.io/blog/we-are-deprecateware/';
+        var disqus_identifier = 'http://jonahoffline.github.io/rvm-for-your-ruby-projects/';
+        var disqus_url = 'http://jonahoffline.github.io/rvm-for-your-ruby-projects/';
         var disqus_script = 'embed.js';
       
     (function () {
