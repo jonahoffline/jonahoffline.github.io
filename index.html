@@ -468,7 +468,8 @@ The second, <code>rspec:browser</code> will run the first task and open the repo
         github.showRepos({
             user: 'jonahoffline',
             count: 0,
-            skip_forks: true,
+            skip_forks: false,
+            skip_repos: [ "jonahoffline.github.io", "articles", "python-practice", "shell_stuff", "linkshrinkex_web" ],
             target: '#gh_repos'
         });
     });
