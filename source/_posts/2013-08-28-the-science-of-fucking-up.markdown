@@ -18,7 +18,7 @@ This is no different from stabbing in the dark.
 
 I won't get into details, but let's just say the rest of their system was a ghetto. I've read about drug cartels with better workflows. I envied the janitors, even though our jobs were closely related. We both had to clean up these people's shit. 
 
-The week was almost over. One more game of Solitaire and I would finally go home. Suddenly, I get an email saying they can't generate some reports and they're pissed off. After giving away an extra-hour and doing some Sherlock-worthy guess work I noticed there were two versions of the screen-scraper. An unfinished "backup" made during the development of the script and the final version I should have ran. It's an understatement to say I had fucked up big time. 
+The week was almost over. One more game of Solitaire and I would finally go home. Suddenly, I get an email saying they can't generate some reports and they're pissed off. After giving away an extra-hour and doing some Sherlock-worthy guess work, I noticed there were two versions of the screen-scraper. An unfinished "backup" made during the development of the script and the final version I should have ran. It's an understatement to say I had fucked up big time. 
 
 ### Problems are opportunities in disguise
 
