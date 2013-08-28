@@ -4,7 +4,7 @@
   <title><![CDATA[Holy Ruby!]]></title>
   <link href="http://jonahoffline.github.io/atom.xml" rel="self"/>
   <link href="http://jonahoffline.github.io/"/>
-  <updated>2013-08-23T02:42:24-04:00</updated>
+  <updated>2013-08-28T07:52:48-04:00</updated>
   <id>http://jonahoffline.github.io/</id>
   <author>
     <name><![CDATA[Jonah Ruiz]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The Science of Fucking Up]]></title>
+    <link href="http://jonahoffline.github.io/the-science-of-fucking-up/"/>
+    <updated>2013-08-28T05:29:00-04:00</updated>
+    <id>http://jonahoffline.github.io/the-science-of-fucking-up</id>
+    <content type="html"><![CDATA[<p>It was my second or third week as a consultant at a prestigious Telecommunications Company. To beat traffic, I would get up at 4 A.M everyday. Each drive would only take me 12 songs, but I had to wait in the parking lot for 36 more songs and two cups of coffee.</p>
+
+<p>After the introductory twenty-dollar tour, I realized I was in Hell. The whole team that kept their infrastructure from burning had resigned and left the same way you would avoid a plague. Documentation was outdated and mostly useless. There was no version control for their in-house software which was written using .NET (2.0), T-SQL, Java, Python and PHP. As if this wasn&rsquo;t enough, I was alone with two <del>charming</del> managers who didn&rsquo;t seem to be aware of their sinking ship.</p>
+
+<p>There was a list of tasks that had to be done weekly. One of them involved running a few python scripts that would screen-scrape customer data from an ancient server, parse each entry with a RegEx recipe that looked like a black magic spell to finally insert the result into an unpatched vintage SQL Server. These scripts would get the username, unencrypted password and host to scrape from an internal web service. There was no way of telling if something went wrong until a few days. As I fired each process, this is really what went through my mind:
+This is no different from stabbing in the dark.</p>
+
+<p>I won&rsquo;t get into details, but let&rsquo;s just say the rest of their system was a ghetto. I&rsquo;ve read about drug cartels with better workflows. I envied the janitors, even though our jobs were closely related. We both had to clean up these people&rsquo;s shit.</p>
+
+<p>The week was almost over. One more game of Solitaire and I would finally go home. Suddenly, I get an email saying they can&rsquo;t generate some reports and they&rsquo;re pissed off. After giving away an extra-hour and doing some Sherlock-worthy guess work I noticed there were two versions of the screen-scraper. An unfinished &ldquo;backup&rdquo; made during the development of the script and the final version I should have ran. It&rsquo;s an understatement to say I had fucked up big time.</p>
+
+<h3>Problems are opportunities in disguise</h3>
+
+<p>It could be argued that the situation could have been avoided If I had inherited better documentation but I blame myself. Like many developers, I let my ego get in the way. The little perfectionist inside me had focused more on their flaws and how bad their system was designed instead of taking a more positive approach: doing the best you can with what you have. Problems are opportunities in disguise.</p>
+
+<h3>Fail Driven Development (FDD)</h3>
+
+<p>Since this incident I adopted a personal development cycle I based on <a href="http://en.wikipedia.org/wiki/Test-driven_development">TDD</a>.</p>
+
+<p><strong>Fail Driven Development</strong> consists of three steps:</p>
+
+<ol>
+<li>Life writes a failing test for you</li>
+<li>You write your fate, you make it pass</li>
+<li>Clean up and remove any unnecessary concept, behavior or belief slowing you down</li>
+</ol>
+
+
+<p>This cycle is constantly taking place, don&rsquo;t be lazy and fix your bugs!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A Mind Prison]]></title>
