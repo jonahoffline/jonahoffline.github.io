@@ -9,7 +9,7 @@
   <meta name="author" content="Jonah Ruiz">
 
   
-  <meta name="description" content="It was my second or third week as a consultant at a prestigious Telecommunications Company. To beat traffic, I would get up at 4 A.M everyday. Each &hellip;">
+  <meta name="description" content="While doing some pair-programming with a friend of mine, I noticed he had RVM installed but only used one gemset for everything. As a result, his &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jonahoffline.github.io">
+  <link rel="canonical" href="http://jonahoffline.github.io/page/5">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="http://feeds.feedburner.com/HolyRuby" rel="alternate" title="Holy Ruby!" type="application/atom+xml">
@@ -83,7 +83,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/the-science-of-fucking-up/">The Science of Fucking Up</a></h1>
+      <h1 class="entry-title"><a href="/rvm-for-your-ruby-projects/">RVM for Your Ruby Projects</a></h1>
     
     
       <p class="meta">
@@ -99,42 +99,91 @@
   
 
 
-<time datetime="2013-08-28T05:29:00-04:00" pubdate data-updated="true">Aug 28<span>th</span>, 2013</time>
+<time datetime="2013-07-29T23:39:00-04:00" pubdate data-updated="true">Jul 29<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>It was my second or third week as a consultant at a prestigious Telecommunications Company. To beat traffic, I would get up at 4 A.M everyday. Each drive would only take me 12 songs, but I had to wait in the parking lot for 36 more songs and two cups of coffee.</p>
+  <div class="entry-content"><p>While doing some pair-programming with a friend of mine, I noticed he had <a href="https://www.rvm.io">RVM</a> installed but only used one gemset for <em>everything</em>. As a result, his machine was slow and polluted with old gem versions. You could say that it was almost a mirror of <a href="http://www.rubygems.org">Rubygems</a>. I wondered how many ruby developers had the same problem so I decided to share this.</p>
 
-<p>After the introductory twenty-dollar tour, I realized I was in Hell. The whole team that kept their infrastructure from burning had resigned and left the same way you would avoid a plague. Documentation was outdated and mostly useless. There was no version control for their in-house software which was written using .NET (2.0), T-SQL, Java, Python and PHP. As if this wasn&rsquo;t enough, I was alone with two <del>charming</del> managers who didn&rsquo;t seem to be aware of their sinking ship.</p>
+<h2>Installing RVM</h2>
 
-<p>There was a list of tasks that had to be done weekly. One of them involved running a few python scripts that would screen-scrape customer data from an ancient server, parse each entry with a RegEx recipe that looked like a black magic spell to finally insert the result into an unpatched vintage SQL Server. These scripts would get the username, unencrypted password and host to scrape from an internal web service. There was no way of telling if something went wrong until a few days. As I fired each process, this is really what went through my mind:
-This is no different from stabbing in the dark.</p>
+<p>If you have never used RVM, you&rsquo;ve been missing out. It won&rsquo;t do the dishes or clean your room, but it will make you happier. RVM allows you to easily install, manage, and work with multiple ruby environments. Avoiding version conflicts and maintaining any ruby project, gem, or Rails app organized is now a breeze.</p>
 
-<p>I won&rsquo;t get into details, but let&rsquo;s just say the rest of their system was a ghetto. I&rsquo;ve read about drug cartels with better workflows. I envied the janitors, even though our jobs were closely related. We both had to clean up these people&rsquo;s shit.</p>
+<p>Let&rsquo;s get it out of the way and install it along a stable version of Ruby.</p>
 
-<p>The week was almost over. One more game of Solitaire and I would finally go home. Suddenly, I get an email saying they can&rsquo;t generate some reports and they&rsquo;re pissed off. After giving away an extra-hour and doing some Sherlock-worthy guess work, I noticed there were two versions of the screen-scraper. An unfinished &ldquo;backup&rdquo; made during the development of the script and the final version I should have ran. It&rsquo;s an understatement to say I had fucked up big time.</p>
+<pre><code>$ \curl -L https://get.rvm.io | bash -s stable --ruby
+</code></pre>
 
-<h3>Problems are opportunities in disguise</h3>
+<p>Depending on your internet connection and computer, it will take a few minutes. Once that&rsquo;s done, you will need to reopen your shell window or run:</p>
 
-<p>It could be argued that the situation could have been avoided If I had inherited better documentation but I blame myself. Like many developers, I let my ego get in the way. The little perfectionist inside me had focused more on their flaws and how bad their system was designed instead of taking a more positive approach: doing the best you can with what you have. Problems are opportunities in disguise.</p>
+<pre><code>$ source ~/.rvm/scripts/rvm
+</code></pre>
 
-<h3>Fail Driven Development (FDD)</h3>
+<p>Let&rsquo;s verify that RVM is loaded and that everything is installed correctly.</p>
 
-<p>Since this incident I adopted a personal development cycle I based on <a href="http://en.wikipedia.org/wiki/Test-driven_development">TDD</a>.</p>
+<pre><code>$ rvm current
+</code></pre>
 
-<p><strong>Fail Driven Development</strong> consists of three steps:</p>
+<p>You should now get a Ruby version (e.g., <code>ruby-2.0.0-p247</code>). If you didn&rsquo;t, run <code>rvm notes</code>.</p>
 
-<ol>
-<li>Life writes a failing test for you</li>
-<li>You write your fate, you make it pass</li>
-<li>Clean up and remove any unnecessary concept, behavior or belief slowing you down</li>
-</ol>
+<h2>Using RVM to organize your projects</h2>
 
+<p>Instead of globally sharing one gemset for all projects, let&rsquo;s create one for our imaginary <strong>Quantum Kittens</strong> Rails App.</p>
 
-<p>This cycle is constantly taking place, don&rsquo;t be lazy and fix your bugs!</p>
+<p>Just enter the directory and run:</p>
+
+<pre><code>$ rvm --create --ruby-version ruby-2.0.0-p247@quantum_kittens
+</code></pre>
+
+<p>The command will not output anything, but if we run <code>ls -a</code> you will notice there are now two files in the directory.</p>
+
+<pre><code>.ruby-version
+.ruby-gemset
+</code></pre>
+
+<p>From now on, RVM will automatically change into that ruby version (<code>ruby-2.0.0-p247</code>) with any gems you install to its self-contained gemset (<code>quantum_kittens</code>) every time you enter that directory. You should check these two files into your source control.</p>
+
+<h4>Other useful RVM commands</h4>
+
+<p>This article would not be complete without a few of the most used RVM commands.</p>
+
+<p>To verify the current version and gemset:</p>
+
+<pre><code>$ rvm current
+</code></pre>
+
+<p>To get a list of gemsets:</p>
+
+<pre><code>$ rvm gemset list
+</code></pre>
+
+<p>To get a list of all the installed versions of ruby:</p>
+
+<pre><code>$ rvm list  
+</code></pre>
+
+<p>To view available versions of ruby to install:</p>
+
+<pre><code>$ rvm list known
+</code></pre>
+
+<p>To install  another ruby version:</p>
+
+<pre><code>$ rvm install rbx-head
+</code></pre>
+
+<p>To set a default ruby with a new gemset:</p>
+
+<pre><code>$ rvm --create --default use rbx-head@kawaii_gems
+</code></pre>
+
+<p>To remove a gemset:</p>
+
+<pre><code>$ rvm gemset delete evil_gems
+</code></pre>
 </div>
   
   
@@ -144,9 +193,9 @@ This is no different from stabbing in the dark.</p>
   
   <div class="pagination">
     
-      <a class="prev" href="/page/2/">&larr; Older</a>
-    
     <a href="/archives">Blog Archives</a>
+    
+    <a class="next" href="/page/4/">Newer &rarr;</a>
     
   </div>
 </div>
