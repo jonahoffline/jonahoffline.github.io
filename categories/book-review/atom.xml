@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Book Review | Holy Ruby!]]></title>
   <link href="http://jonahoffline.github.io/categories/book-review/atom.xml" rel="self"/>
   <link href="http://jonahoffline.github.io/"/>
-  <updated>2013-11-03T19:04:21-04:00</updated>
+  <updated>2013-11-03T19:18:27-04:00</updated>
   <id>http://jonahoffline.github.io/</id>
   <author>
     <name><![CDATA[Jonah Ruiz]]></name>
@@ -25,6 +25,8 @@
 <p>The author walks you through a step-by-step workflow of scraping and parsing a news headline (from The New York Times website) to creating a small news aggregation website using Sinatra. It also explains 13 features that will prevent you from ever needing to look for Nokogiri&rsquo;s documentation or scavenge hunting StackOverflow. Finally, if you need to interact with a page before scraping its data you will learn to use the Mechanize gem as a bonus.</p>
 
 <p>Whether you are a new or seasoned developer, you will benefit from this short but concise book.</p>
+
+<p>Get it by going to <a href="http://www.packtpub.com/utilize-information-available-on-internet-using-Nokogiri/book">Packt Publishing</a>.</p>
 ]]></content>
   </entry>
   

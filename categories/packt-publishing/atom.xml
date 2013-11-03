@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: HTML / XML | Holy Ruby!]]></title>
-  <link href="http://jonahoffline.github.io/categories/html-slash-xml/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Packt Publishing | Holy Ruby!]]></title>
+  <link href="http://jonahoffline.github.io/categories/packt-publishing/atom.xml" rel="self"/>
   <link href="http://jonahoffline.github.io/"/>
   <updated>2013-11-03T19:18:27-04:00</updated>
   <id>http://jonahoffline.github.io/</id>
