@@ -9,7 +9,7 @@
   <meta name="author" content="Jonah Ruiz">
 
   
-  <meta name="description" content="While doing some pair-programming with a friend of mine, I noticed he had RVM installed but only used one gemset for everything. As a result, his &hellip;">
+  <meta name="description" content="When working with Ruby On Rails and RSpec, you may want to share your test results with teammates. A screenshot of the terminal just won&rsquo;t do &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,7 +83,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/rvm-for-your-ruby-projects/">RVM for Your Ruby Projects</a></h1>
+      <h1 class="entry-title"><a href="/rspec-test-results-in-html/">RSpec Test Results in HTML</a></h1>
     
     
       <p class="meta">
@@ -99,91 +99,98 @@
   
 
 
-<time datetime="2013-07-29T23:39:00-04:00" pubdate data-updated="true">Jul 29<span>th</span>, 2013</time>
+<time datetime="2013-08-07T00:25:00-04:00" pubdate data-updated="true">Aug 7<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>While doing some pair-programming with a friend of mine, I noticed he had <a href="https://www.rvm.io">RVM</a> installed but only used one gemset for <em>everything</em>. As a result, his machine was slow and polluted with old gem versions. You could say that it was almost a mirror of <a href="http://www.rubygems.org">Rubygems</a>. I wondered how many ruby developers had the same problem so I decided to share this.</p>
+  <div class="entry-content"><p>When working with <strong>Ruby On Rails</strong> and <strong>RSpec</strong>, you may want to share your test results with teammates. A screenshot of the terminal just won&rsquo;t do it. Let&rsquo;s make RSpec generate an html page for us.</p>
 
-<h2>Installing RVM</h2>
-
-<p>If you have never used RVM, you&rsquo;ve been missing out. It won&rsquo;t do the dishes or clean your room, but it will make you happier. RVM allows you to easily install, manage, and work with multiple ruby environments. Avoiding version conflicts and maintaining any ruby project, gem, or Rails app organized is now a breeze.</p>
-
-<p>Let&rsquo;s get it out of the way and install it along a stable version of Ruby.</p>
-
-<pre><code>$ \curl -L https://get.rvm.io | bash -s stable --ruby
+<pre><code>$ rspec --format html --out rspec_results.html
 </code></pre>
 
-<p>Depending on your internet connection and computer, it will take a few minutes. Once that&rsquo;s done, you will need to reopen your shell window or run:</p>
+<p>Depending on your tests, it might look <a href="http://1.bp.blogspot.com/_S5dFdpF6xm0/Sry7S3aXd6I/AAAAAAAAAX0/psgyFEcA5tA/s400/rasta-orangutan-Julia-Malanjina.jpg">Rastafarian</a> if you have tests that are pending and failing. Luckily for us, you can filter them.</p>
 
-<pre><code>$ source ~/.rvm/scripts/rvm
-</code></pre>
+<p>Here&rsquo;s a results screenshot of a Rails App I&rsquo;ve been working on (<a href="https://www.github.com/jpadilla/sopr-platform">SoPR</a>)</p>
 
-<p>Let&rsquo;s verify that RVM is loaded and that everything is installed correctly.</p>
+<p><img src="http://pixelhipsters.com/media/rspec_html_screen.png" alt="Screenshot" /></p>
 
-<pre><code>$ rvm current
-</code></pre>
+<h2>Automating the process</h2>
 
-<p>You should now get a Ruby version (e.g., <code>ruby-2.0.0-p247</code>). If you didn&rsquo;t, run <code>rvm notes</code>.</p>
+<p>There are two ways to achieve this.</p>
 
-<h2>Using RVM to organize your projects</h2>
+<h3>Using RSpec&rsquo;s config file</h3>
 
-<p>Instead of globally sharing one gemset for all projects, let&rsquo;s create one for our imaginary <strong>Quantum Kittens</strong> Rails App.</p>
+<p>I assume you have an <code>.rspec</code> file in your project&rsquo;s root directory. Let&rsquo;s add the following:</p>
 
-<p>Just enter the directory and run:</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">--format html</span>
+</span><span class='line'><span class="go">--out rspec_results.html</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<pre><code>$ rvm --create --ruby-version ruby-2.0.0-p247@quantum_kittens
-</code></pre>
 
-<p>The command will not output anything, but if we run <code>ls -a</code> you will notice there are now two files in the directory.</p>
+<p>Now you should be able to just run the <code>rspec</code> command and get the same results.</p>
 
-<pre><code>.ruby-version
-.ruby-gemset
-</code></pre>
+<h3>Writing a Rake Task</h3>
 
-<p>From now on, RVM will automatically change into that ruby version (<code>ruby-2.0.0-p247</code>) with any gems you install to its self-contained gemset (<code>quantum_kittens</code>) every time you enter that directory. You should check these two files into your source control.</p>
+<p>As an alternative, you can also write a simple Rake task. Let&rsquo;s write a new file to <code>lib/tasks/rspec_html.rake</code> inside our Rails project.</p>
 
-<h4>Other useful RVM commands</h4>
+<figure class='code'><figcaption><span>RSpec Rake Task - rspec_html.rake </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;rspec/core/rake_task&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="ss">RSpec</span><span class="p">:</span><span class="ss">:Core</span><span class="o">::</span><span class="no">RakeTask</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">:spec</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">t</span><span class="o">.</span><span class="n">rspec_opts</span> <span class="o">=</span> <span class="s1">&#39;--format html --out reports/rspec_results.html&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">namespace</span> <span class="ss">:rspec_report</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">desc</span> <span class="s1">&#39;Run all specs and generate RSpec report in HTML&#39;</span>
+</span><span class='line'>  <span class="n">task</span> <span class="ss">:html</span> <span class="o">=&gt;</span> <span class="ss">:spec</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">desc</span> <span class="s1">&#39;Run all specs, generate RSpec report and open it in the browser&#39;</span>
+</span><span class='line'>  <span class="n">task</span> <span class="ss">:browser</span> <span class="k">do</span>
+</span><span class='line'>    <span class="ss">Rake</span><span class="p">:</span><span class="ss">:Task</span><span class="o">[</span><span class="ss">:spec</span><span class="o">].</span><span class="n">invoke</span>
+</span><span class='line'>    <span class="sb">`open reports/rspec_results.html`</span> <span class="c1"># This only works if running OS X.</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>This article would not be complete without a few of the most used RVM commands.</p>
 
-<p>To verify the current version and gemset:</p>
+<p>Gist available <a href="https://gist.github.com/jonahoffline/6170634#file-rspec_html-rake">here</a>.</p>
 
-<pre><code>$ rvm current
-</code></pre>
+<p>If we run <code>$ rake -T</code>, we will see two new rake tasks:</p>
 
-<p>To get a list of gemsets:</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">rake rspec_report:html</span>
+</span><span class='line'><span class="go">rake rspec_report:browser</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<pre><code>$ rvm gemset list
-</code></pre>
 
-<p>To get a list of all the installed versions of ruby:</p>
+<p></p>
 
-<pre><code>$ rvm list  
-</code></pre>
+<p>The first, <code>rspec:html</code> will run all specs and write the report to <code>reports/rspec_results.html</code>.
+The second, <code>rspec:browser</code> will run the first task and open the report in the browser (only works in OS X).</p>
 
-<p>To view available versions of ruby to install:</p>
-
-<pre><code>$ rvm list known
-</code></pre>
-
-<p>To install  another ruby version:</p>
-
-<pre><code>$ rvm install rbx-head
-</code></pre>
-
-<p>To set a default ruby with a new gemset:</p>
-
-<pre><code>$ rvm --create --default use rbx-head@kawaii_gems
-</code></pre>
-
-<p>To remove a gemset:</p>
-
-<pre><code>$ rvm gemset delete evil_gems
-</code></pre>
+<p>Cheers!</p>
 </div>
   
   
@@ -192,6 +199,8 @@
     </article>
   
   <div class="pagination">
+    
+      <a class="prev" href="/page/6/">&larr; Older</a>
     
     <a href="/archives">Blog Archives</a>
     
@@ -211,6 +220,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/book-review-instant-nokogiri/">Book Review: Instant Nokogiri</a>
+      </li>
+    
+      <li class="post">
         <a href="/the-science-of-fucking-up/">The Science of Fucking Up</a>
       </li>
     
@@ -224,10 +237,6 @@
     
       <li class="post">
         <a href="/rspec-test-results-in-html/">RSpec Test Results in HTML</a>
-      </li>
-    
-      <li class="post">
-        <a href="/rvm-for-your-ruby-projects/">RVM for Your Ruby Projects</a>
       </li>
     
   </ul>
@@ -255,7 +264,7 @@
             user: 'jonahoffline',
             count: 0,
             skip_forks: false,
-            skip_repos: [ "jonahoffline.github.io", "articles", "python-practice", "shell_stuff", "linkshrinkex_web" ],
+            skip_repos: [ "jonahoffline.github.io", "articles", "python-practice", "shell_stuff", "linkshrinkex_web", "hubot-revx", "chartkick" ],
             target: '#gh_repos'
         });
     });
