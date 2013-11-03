@@ -10,6 +10,7 @@ categories:
 - HTML / XML
 - Data Scraping
 - Hunter Powers
+- Packt Publishing
 ---
 
 
@@ -20,3 +21,5 @@ As a Ruby developer, I hate wasting my brain's CPU cycles. Technical books shoul
 The author walks you through a step-by-step workflow of scraping and parsing a news headline (from The New York Times website) to creating a small news aggregation website using Sinatra. It also explains 13 features that will prevent you from ever needing to look for Nokogiri's documentation or scavenge hunting StackOverflow. Finally, if you need to interact with a page before scraping its data you will learn to use the Mechanize gem as a bonus.
 
 Whether you are a new or seasoned developer, you will benefit from this short but concise book.
+
+Get it by going to [Packt Publishing](http://www.packtpub.com/utilize-information-available-on-internet-using-Nokogiri/book).
