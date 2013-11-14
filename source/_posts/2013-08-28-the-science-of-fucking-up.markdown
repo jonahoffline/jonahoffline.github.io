@@ -3,6 +3,8 @@ layout: post
 title: "The Science of Fucking Up"
 date: 2013-08-28 05:29
 comments: true
+subject: Growing
+reading_time: 5
 categories:
 - Growing
 - Learning

@@ -1,18 +1,80 @@
-body > header {
-  background: $header-bg;
-  h1 {
-    display: inline-block;
-    margin: 0;
-    a, a:visited, a:hover {
-      color: $title_color;
-      text-decoration: none;
-    }
-  }
-  h2 {
-    margin: .2em 0 0;
-    @extend .sans;
-    font-size: 1em;
-    color: $subtitle-color;
-    font-weight: normal;
-  }
+@import "../custom/buttons";
+
+.inner-left {
+	> header {
+		width: 90%;
+		margin: 100px auto 0 auto;
+		text-align: center;
+        p {
+          color: $white;
+        }
+		a {
+			color: $white;
+			@extend .serif;
+			font-weight: 100;
+          &:hover {
+            color: $link-color-hover;
+          }
+          &:visited {
+            color: lighten($link-color, 5);
+          }
+          &.logo {
+            font-size: 30px;
+            color: $white !important;
+          }
+		}
+		h1, h2 {
+			@extend .serif;
+		}
+		h1 {
+			letter-spacing: -1px;
+			text-transform: uppercase;
+		}
+		h2 {
+			font-size: 0.7em;
+			color: $button-dark-color;
+			bottom: 10px;
+		}
+		@media only screen and (max-width: 850px) {
+			margin: 25px auto 0 auto;
+		}
+		> .profilepic {
+			border-radius: 300px;
+			width: 120px;
+			height: auto;
+			@media only screen and (max-width: 850px) {
+				width: 80px;
+			}
+		}
+        > .logopic {
+          border-radius: 300px;
+          width: 220px;
+          height: auto;
+          @media only screen and (max-width: 850px) {
+            width: 80px;
+          }
+        }
+        > .about {
+          font-size: 0.9em;
+          text-align: justify;
+          text-justify: inter-word;
+          margin: 20px;
+          bottom: 20px;
+        }
+	}
+	> footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		margin: auto;
+		text-align: center;
+		@media only screen and (max-width: 850px) {
+			width: 100%;
+			position: relative;
+		}
+		a {
+			min-width: 100px;
+		}
+	}
 }

@@ -3,6 +3,9 @@ layout: post
 title: "Book Review: Instant Nokogiri"
 date: 2013-11-03 18:16
 comments: true
+subject: "Ruby Books"
+reading_time: 2
+review: true
 categories:
 - Book Review
 - Nokogiri

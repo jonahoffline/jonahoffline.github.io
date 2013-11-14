@@ -3,6 +3,8 @@ layout: post
 title: "A Mind Prison"
 date: 2013-08-21 22:25
 comments: true
+subject: "Digital Slavery"
+reading_time: 5
 categories: 
 - software
 - productivity

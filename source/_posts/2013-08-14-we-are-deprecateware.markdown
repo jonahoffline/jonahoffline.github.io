@@ -3,6 +3,8 @@ layout: post
 title: "We Are Deprecateware"
 date: 2013-08-14 10:57
 comments: true
+reading_time: 2
+subject: Learning
 categories:
 - Knowledge debt
 - Learning

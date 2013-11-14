@@ -3,6 +3,8 @@ layout: post
 title: "RVM for your Ruby projects"
 date: 2013-07-29 23:39
 comments: true
+reading_time: 2
+subject: Ruby
 categories: 
 - Ruby
 - Rails

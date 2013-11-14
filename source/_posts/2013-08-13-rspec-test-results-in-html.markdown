@@ -3,6 +3,8 @@ layout: post
 title: "RSpec Test Results in HTML"
 date: 2013-08-07 00:25
 comments: true
+subject: RSpec
+reading_time: 5
 categories: 
 - Ruby
 - Rails
