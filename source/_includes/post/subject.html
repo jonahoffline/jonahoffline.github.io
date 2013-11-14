@@ -1,0 +1,9 @@
+{% capture post %}{% endcapture %}
+{% capture category %}{% endcapture %}
+{% unless post == '0' %}
+  {% if post.review == true %}
+    {{ post.subject }}
+  {% elsif post.subject %}
+    On {{ post.subject }}
+  {% endif %}
+{% endunless %}
