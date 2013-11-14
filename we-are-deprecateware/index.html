@@ -24,11 +24,8 @@
   <link href="http://feeds.feedburner.com/HolyRuby" rel="alternate" title="Holy Ruby!" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans|Roboto:400,300' rel='stylesheet' type='text/css'>
 
   
   <script type="text/javascript">
@@ -46,38 +43,44 @@
 
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Holy Ruby!</a></h1>
-  
-    <h2>A Lazy Developer's Path to Enlightenment; Code for the soul.</h2>
-  
+
+<body>
+	<div class="container">
+		<aside class="left">
+			<div class="inner-left">
+				<header>
+					<img src="/images/holyruby.png" alt="Holy Ruby [Logo]" title="Holy Ruby [Logo]" class="logopic" />
+
+<hgroup>
+  <h1><a class="logo" href="/">Holy Ruby!</a></h1>
 </hgroup>
+<img src="http://www.gravatar.com/avatar/b6694c75d95b8c1571f0ea8d732e6866?s=200" alt="Gravatar of Jonah Ruiz " title="Gravatar of Jonah Ruiz" class="profilepic" />
+<p class="about">I’m Jonah, a ruby developer from Puerto Rico. I run a RubyOnRails Consultancy / Shop called
+  <a href="http://www.pixelhipsters.com">PixelHipsters</a>. When not writing software, I love to write and record
+  <a href="https://soundcloud.com/jonah-offline">music</a>.
+</p>
 
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="http://feeds.feedburner.com/HolyRuby" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:jonahoffline.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Home</a></li>
-  <li><a href="/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div>
-<article class="hentry" role="article">
-  
+				</header>
+                <footer>
+					<p>
+	
+		<a href="http://github.com/jonahoffline" class="btn btn-dark">GitHub</a>
+	
+	
+		<a href="http://twitter.com/JonahBinario" class="btn btn-dark">Twitter</a>
+	
+</p>
+<p class="credit-copyright">
+    Copyright &copy; 2013 - Jonah Ruiz.
+</p>
+				</footer>
+			</div>
+		</aside>
+    	<section class="right">
+    		<div class="inner-right">
+    			<div id="posts">
+    			  	<article class="post">
+    
   <header>
     
       <h1 class="entry-title">We Are Deprecateware</h1>
@@ -98,6 +101,14 @@
 
 <time datetime="2013-08-14T10:57:00-04:00" pubdate data-updated="true">Aug 14<span>th</span>, 2013</time>
         
+      </p>
+      <p class="meta subject">
+        
+
+
+  
+
+
       </p>
     
   </header>
@@ -125,38 +136,10 @@
 </div>
 
 
-  <footer>
-    <p class="meta">
-      
-  
-
-<span class="byline author vcard">Posted by <span class="fn">Jonah Ruiz</span></span>
-
-      
+</article>
 
 
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-14T10:57:00-04:00" pubdate data-updated="true">Aug 14<span>th</span>, 2013</time>
-      
-
-<span class="categories">
-  
-    <a class='category' href='/categories/bitbucket/'>Bitbucket</a>, <a class='category' href='/categories/fear-of-failure/'>Fear of Failure</a>, <a class='category' href='/categories/github/'>Github</a>, <a class='category' href='/categories/growing/'>Growing</a>, <a class='category' href='/categories/innovation/'>Innovation</a>, <a class='category' href='/categories/knowledge-debt/'>Knowledge debt</a>, <a class='category' href='/categories/learning/'>Learning</a>
-  
-</span>
-
-
-    </p>
-    
-      <div class="sharing">
+        <div class="sharing">
   
   <a href="//twitter.com/share" class="twitter-share-button" data-url="http://jonahoffline.github.io/we-are-deprecateware/" data-via="JonahBinario" data-counturl="http://jonahoffline.github.io/we-are-deprecateware/" >Tweet</a>
   
@@ -166,123 +149,24 @@
   
 </div>
 
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/rspec-test-results-in-html/" title="Previous Post: RSpec Test Results in HTML">&laquo; RSpec Test Results in HTML</a>
-      
-      
-        <a class="basic-alignment right" href="/a-mind-prison/" title="Next Post: A Mind Prison">A Mind Prison &raquo;</a>
-      
-    </p>
-  </footer>
-</article>
 
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+<section id="comments">
+    <div id="disqus_thread"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-  </section>
-
-</div>
-
-<aside class="sidebar">
-  
-    <section>
-  <img class="author_image" src="http://gravatar.com/avatar/b6694c75d95b8c1571f0ea8d732e6866.png?s=140">
-  <h1>About Me</h1>
-  <p>I’m Jonah, a ruby developer from Puerto Rico. I run a RubyOnRails Consultancy / Shop called <a href="http://www.pixelhipsters.com">PixelHipsters</a>. When not writing software, I love to write and record <a href="https://soundcloud.com/jonah-offline">music</a>.</p>
-</section>
-<section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/book-review-instant-nokogiri/">Book Review: Instant Nokogiri</a>
-      </li>
-    
-      <li class="post">
-        <a href="/the-science-of-fucking-up/">The Science of Fucking Up</a>
-      </li>
-    
-      <li class="post">
-        <a href="/a-mind-prison/">A Mind Prison</a>
-      </li>
-    
-      <li class="post">
-        <a href="/we-are-deprecateware/">We Are Deprecateware</a>
-      </li>
-    
-      <li class="post">
-        <a href="/rspec-test-results-in-html/">RSpec Test Results in HTML</a>
-      </li>
-    
-  </ul>
-</section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating...</li>
-  </ul>
-  
-  <a href="https://github.com/jonahoffline">@jonahoffline</a> on GitHub
-  
-  <script type="text/javascript">
-    $(document).ready(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'jonahoffline',
-            count: 0,
-            skip_forks: false,
-            skip_repos: [ "jonahoffline.github.io", "articles", "python-practice", "shell_stuff", "linkshrinkex_web", "hubot-revx", "chartkick" ],
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
 
 
-
-<section class="googleplus">
-  <h1>
-    <a href="https://plus.google.com/113545181219635583577?rel=author">
-      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
-      Google+
-    </a>
-  </h1>
-</section>
-
-
-
-<section>
-  <div>
-    <a href="http://twitter.com/JonahBinario" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @JonahBinario</a>
-  </div>
-</section>
-
-
-  
-</aside>
-
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Jonah Ruiz -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+    			</div>
+    			<footer id="footer">
+    				<p class="credit">
+  Copyright &copy; 2013 - Jonah Ruiz. Powered by <a href="http://octopress.org">Octopress</a>
 </p>
 
-</footer>
-  
+
+    			</footer>
+    			
 
 <script type="text/javascript">
       var disqus_shortname = 'holyruby';
@@ -295,7 +179,7 @@
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
@@ -327,6 +211,26 @@
 
 
 
+<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans|Roboto:400,300' rel='stylesheet' type='text/css'>
 
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-43142000-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+
+
+    		</div>
+    	</section>
+  	</div>
 </body>
 </html>

@@ -2,35 +2,39 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://jonahoffline.github.io/rvm-for-your-ruby-projects/</loc>
-        <lastmod>2013-08-14T01:30:01-04:00</lastmod>
+        <lastmod>2013-11-14T00:56:18-04:00</lastmod>
     </url>
     <url>
         <loc>http://jonahoffline.github.io/rspec-test-results-in-html/</loc>
-        <lastmod>2013-08-14T01:30:15-04:00</lastmod>
+        <lastmod>2013-11-14T00:56:18-04:00</lastmod>
     </url>
     <url>
         <loc>http://jonahoffline.github.io/we-are-deprecateware/</loc>
-        <lastmod>2013-08-14T13:51:54-04:00</lastmod>
+        <lastmod>2013-11-14T00:56:18-04:00</lastmod>
     </url>
     <url>
         <loc>http://jonahoffline.github.io/a-mind-prison/</loc>
-        <lastmod>2013-08-22T01:00:42-04:00</lastmod>
+        <lastmod>2013-11-14T00:56:18-04:00</lastmod>
     </url>
     <url>
         <loc>http://jonahoffline.github.io/the-science-of-fucking-up/</loc>
-        <lastmod>2013-08-28T08:07:28-04:00</lastmod>
+        <lastmod>2013-11-14T00:56:18-04:00</lastmod>
     </url>
     <url>
         <loc>http://jonahoffline.github.io/book-review-instant-nokogiri/</loc>
-        <lastmod>2013-11-03T19:17:49-04:00</lastmod>
+        <lastmod>2013-11-14T01:28:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://jonahoffline.github.io/archives/</loc>
-        <lastmod>2013-11-03T19:17:49-04:00</lastmod>
+        <lastmod>2013-11-14T01:28:15-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://jonahoffline.github.io/blog/archives/</loc>
+        <lastmod>2013-11-14T01:28:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://jonahoffline.github.io/</loc>
-        <lastmod>2013-11-03T19:17:49-04:00</lastmod>
+        <lastmod>2013-11-14T01:28:15-04:00</lastmod>
     </url>
     <url>
         <loc>http://jonahoffline.github.io/robots.txt</loc>
