@@ -103,3 +103,7 @@ facebook_like: false
 
 # Gravatar
 gravatar_email: jonah@pixelhipsters.com
+
+# Karmacracy Share Button
+karmacracy_share_button: true
+karmacracy_kclicks_display: right
